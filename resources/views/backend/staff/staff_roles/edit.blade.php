@@ -39,87 +39,6 @@
                 <div class="form-group row">
                     <label class="col-md-2 col-from-label" for="banner"></label>
                     <div class="col-md-8">
-                        @if (addon_is_activated('pos_system'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('POS System') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="1" @php if(in_array(1, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Products') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="2" @php if(in_array(2, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('All Orders') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="3" @php if(in_array(3, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Inhouse orders') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="4" @php if(in_array(4, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Seller Orders') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="5" @php if(in_array(5, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Pick-up Point Order') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="6" @php if(in_array(6, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        @if (addon_is_activated('refund_request'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('Refunds') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="7" @php if(in_array(7, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
                         <div class="row">
                             <div class="col-md-10">
                                 <label class="col-from-label">{{ translate('Customers') }}</label>
@@ -133,44 +52,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Sellers') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="9" @php if(in_array(9, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Reports') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="10" @php if(in_array(10, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
                                 <label class="col-from-label">{{ translate('Marketing') }}</label>
                             </div>
                             <div class="col-md-2">
                                 <label class="aiz-switch aiz-switch-success mb-0">
                                     <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="11" @php if(in_array(11, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Support') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="12" @php if(in_array(12, $permissions)) echo "checked"; @endphp>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -197,71 +83,6 @@
                                 </label>
                             </div>
                         </div>
-                        @if (addon_is_activated('affiliate_system'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('Affiliate System') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="15" @php if(in_array(15, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
-                        @if (addon_is_activated('offline_payment'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('Offline Payment System') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="16" @php if(in_array(16, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
-                        @if (addon_is_activated('paytm'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('Paytm Payment Gateway') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="17" @php if(in_array(17, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
-                        @if (addon_is_activated('club_point'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('Club Point System') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="18" @php if(in_array(18, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
-                        @if (addon_is_activated('otp_system'))
-                          <div class="row">
-                              <div class="col-md-10">
-                                  <label class="col-from-label">{{ translate('OTP System') }}</label>
-                              </div>
-                              <div class="col-md-2">
-                                  <label class="aiz-switch aiz-switch-success mb-0">
-                                      <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="19" @php if(in_array(19, $permissions)) echo "checked"; @endphp>
-                                      <span class="slider round"></span>
-                                  </label>
-                              </div>
-                          </div>
-                        @endif
                         <div class="row">
                             <div class="col-md-10">
                                 <label class="col-from-label">{{ translate('Staffs') }}</label>
@@ -269,17 +90,6 @@
                             <div class="col-md-2">
                                 <label class="aiz-switch aiz-switch-success mb-0">
                                     <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="20" @php if(in_array(20, $permissions)) echo "checked"; @endphp>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <label class="col-from-label">{{ translate('Addon Manager') }}</label>
-                            </div>
-                            <div class="col-md-2">
-                                <label class="aiz-switch aiz-switch-success mb-0">
-                                    <input type="checkbox" name="permissions[]" class="form-control demo-sw" value="21" @php if(in_array(21, $permissions)) echo "checked"; @endphp>
                                     <span class="slider round"></span>
                                 </label>
                             </div>

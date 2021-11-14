@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannersTable extends Migration
+class CreateNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateBannersTable extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->string("photo")->nullable();
-            $table->string("url", 1000)->nullable();
-            $table->integer("position")->default(1);
-            $table->integer("published")->default(0);
+            $table->string("type");
+            $table->string("notifiable_type");
+            $table->bigInteger("notifiable_id");
+            $table->text("data");
+            $table->timestamp("read_at")->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateBannersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('notifications');
     }
 }

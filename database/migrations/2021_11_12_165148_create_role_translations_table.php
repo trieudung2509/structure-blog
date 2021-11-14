@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannersTable extends Migration
+class CreateRoleTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateBannersTable extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('role_translations', function (Blueprint $table) {
             $table->id();
-            $table->string("photo")->nullable();
-            $table->string("url", 1000)->nullable();
-            $table->integer("position")->default(1);
-            $table->integer("published")->default(0);
+            $table->bigInteger("role_id");
+            $table->string("name", 50);
+            $table->string("lang", 100);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateBannersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('role_translations');
     }
 }
